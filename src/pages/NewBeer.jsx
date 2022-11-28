@@ -25,19 +25,19 @@ const NewBeer = () => {
         axios
         .post("https://ih-beers-api2.herokuapp.com/beers/new", formData)
         .then((response) => console.log(response))
+        setFormData({
+          name: "",
+          tagline : "",
+          description : "",
+          first_brewed : "",
+          brewers_tips : "",
+          attenuation_level :"",
+          contributed_by : "",
+      })
         .catch((err) => {
           console.error(err)
         })
     
-        setFormData({
-            name: "",
-            tagline : "",
-            description : "",
-            first_brewed : "",
-            brewers_tips : "",
-            attenuation_level :"",
-            contributed_by : "",
-        })
       }
     
       const { 
